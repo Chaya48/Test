@@ -1,0 +1,192 @@
+1.In a class same method name and different parameters is called the method overLoading.
+
+class Person{
+
+static void running(int kiloMeter){
+  int kiloMeter=2;
+System.out.println("kilometer is :"+kiloMeter);
+ }
+static void running(String name)
+{
+String name="abacd";
+System.out.println("name is :"+name);
+}
+}
+
+class MainMethod{
+public static void main(String[] args){
+
+Sysstem.out.println("invoking main in main method");
+
+Person.running(3);
+System.out.println("kilometer is :");
+Person.running("cahdg");
+System.out.println("name is :");
+}
+}
+
+
+2.There are 4 types of variables 
+  1.Local variables : there are decleared in the method
+exp: class person{
+public static void main(String[] args){
+     String name="sjbbd";
+     }
+
+  2. Static variable: decleared in the class with using static keyword.
+exp: class number{
+  static int=1;
+   }
+ 3. Instance variable: declaared in the class without using the static keyword
+ exp:   class person{
+           String name="shdd";
+           }
+ 4. Parameter variable: decleared the variables with in the parantisis.
+exp:   class person{
+      void running(int kilometer)
+    }
+
+4. class Mobile{
+       String brand;
+       String colour;
+    Mobile(){
+    Sysstem.out.println("invoking no- args constructor in mobile");
+}
+    Mobile(String brand,String colour){
+System.out.println("invoking parameter constructor in mobile");
+    }
+      }
+  class MobileRunner{
+ public static void main(String[] args){
+    Mobile mobile=new Mobile();
+   System.out.println(mobile.brand);
+   System.out.println(mobile.colour);
+
+   Mobile mobile1=new Mobile("onePluse","black");
+   mobile1.brand="onepluse";
+   mobile1.colour="black";
+   System.out.println("mobile brand is :"+mobile1.brand);
+   System.out,println("mobile colour is :"+mobile1.colour):
+}
+}
+
+5. class Cake{
+    String type;
+    float price;
+
+    void testy(String type){
+    this.type=type;
+    }
+    void testy(String type,float price){
+    this.type=type;
+    this.price=price;
+    }
+}
+
+
+class CakeRunner{
+public static void main(String[] values){
+
+Cake cake=new Cake("cup",25);
+cake.testy("cup");
+System.out.println("cake type is :"+cake.type);
+cake.testy("cup",26);
+System.out.println("cake type is :"+cake.type);
+System.out.println("cake price is :"+cake.price);
+}
+}
+
+6.class Laptop{
+  Static String brand;
+  Static float price;
+
+
+static{
+System.out.println("invoking main in static constructor");
+brand="lenovo";
+price="35000";
+}
+
+static void printStatic(String brand,float price){
+System.out.println("invoking main in printstatic constructor");
+}
+}
+
+
+class LaptopRunner{
+public static void main(String[] args){
+
+Laptop laptop=new Laptop();
+
+Laptop.printStatic("lenovo",350000);
+}
+}
+
+7. class Watch{
+    String brand;
+    String colour;
+    flaot price;
+    String type;
+
+   Watch(){
+   Sysytem.out.println("invoking no-args constructor");
+}
+
+Watch(String brand){
+this.brand=brand;
+System.out.println("invoking strinng constructor");
+}
+Watch(String brand,String colour){
+this(colour);
+System.out.println("invoking String, string constructor");
+}
+
+Watch(String brand,String colour,float price){
+this(price);
+System.out.println("invoking String,string,float constructor);
+}
+Watch(String brand,String colour,float price,String type){
+this(type);
+System.out.println("invoking String, string, float, string construcor");
+} 
+}
+
+class WatchRunner{
+public static void main(String[] values){
+
+Watch watch=new Watch();
+
+Watch watch1=new Watch("boat");
+System.out.println("brand is "+watch1.brand);
+
+Watch watch2=new Watch("boat","black");
+
+Watch watch3=new Watch("boat","black",1900);
+
+Watch watch4=new Watch("boat","black",1900,"digital");
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
